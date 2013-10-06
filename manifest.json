@@ -6,10 +6,9 @@
     "scripts": ["background.js"]
   },
   "icons": {
-      "default_icon": "logo.png",
-    "default_popup": "popup.html"
+      "default_icon": "logo.png"
   },
-  "permissions": ["tabs", "unlimitedStorage"],
-  "omnibox": { "keyword" : "." },
+
+  "permissions": ["tabs","contextMenus"],
   "manifest_version": 2
 }
