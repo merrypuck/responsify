@@ -248,28 +248,25 @@
 			return(combinedChildrenHeight);
 			
 		}
-
+		layer1 = [];
 		layer1Significance = function(element) {
 			var elementDimensions = element.getBoundingClientRect();
 			var childrenArray = findChildren(element);
 			// var combinedChildrenWidth = findCombinedWidth(element);
-			layer1 = [];
 			if(childrenArray.length > 0) {
 				for(i in childrenArray) {
-					if(childrenArray[i]['element'].getBoundingClientRect() != undefined) {
-						var childDimensions = childrenArray[i]['element'].getBoundingClientRect();
-						if(childDimensions.width != 0 && childDimensions.width < elementDimensions.width ) {
-							layer1.push(childrenArray[i]);
-							continue;
-						}
-						else {
-							layer1Significance(childrenArray[i]['element']);
-						}
-					}
-					else {
+					var childDimensions = childrenArray[i]['element'].getBoundingClientRect();
+					if(childDimensions.width != 0 && childDimensions.width < elementDimensions.width ) {
+						layer1.push(childrenArray[i]);
+						console.log(layer1);
+
 						continue;
 					}
-					console.log(layer1);
+					else {
+						layer1Significance(childrenArray[i]['element']);
+					}
+			
+				
 				}
 			}		
 		};
