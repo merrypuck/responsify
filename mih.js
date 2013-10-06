@@ -47,7 +47,6 @@
 					
 				}
 				                                          	
-				
 			}
 
 	};
@@ -310,7 +309,8 @@
 	      }
 	      else{
 	          return(null);  
-	      }        
+	      }      //...ÒÒÒ;ÒL≤''
+
 	    }
 	         );
 	};
@@ -363,13 +363,6 @@ editLayer1(document.querySelector('body'));
     
 	isUrlExists('http://google.com');
 */
-
-makeResponsive = function() {
-	var body = document.querySelector('body');
-	var layer1 = [];
-	layer1Significance(body);
-	
-}
 
 
 
